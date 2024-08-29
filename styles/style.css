@@ -1,0 +1,365 @@
+/* Reset some basic styles */
+/* 모든 요소에 기본 여백, 패딩, 박스 사이징 설정을 초기화합니다. */
+* {
+    margin: 0; /* 기본 여백을 0으로 설정 */
+    padding: 0; /* 기본 패딩을 0으로 설정 */
+    box-sizing: border-box; /* 패딩과 보더를 포함한 너비 계산 */
+}
+
+/* Global Styles */
+/* 전체 페이지의 기본 스타일을 설정합니다. */
+body {
+    font-family: Arial, sans-serif; /* 기본 글꼴을 Arial로 설정, 없으면 sans-serif 계열 글꼴 사용 */
+    line-height: 1.6; /* 줄 높이를 1.6으로 설정하여 텍스트 읽기 쉽게 만듦 */
+    background-color: #f4f4f4; /* 페이지 배경색을 밝은 회색으로 설정 */
+    margin: 0; /* 기본 여백을 0으로 설정 */
+    display: flex; /* 페이지를 플렉스 박스로 설정 */
+    flex-direction: column; /* 콘텐츠를 수직 방향으로 배치 */
+    min-height: 100vh; /* 뷰포트 높이의 100%로 설정하여 페이지 전체를 차지하게 함 */
+}
+
+/* Navbar */
+/* 네비게이션 바 스타일을 설정합니다. */
+.navbar {
+    display: flex; /* 내부 아이템을 플렉스 박스 레이아웃으로 배치 */
+    justify-content: space-between; /* 아이템 사이에 균등한 간격을 둠 */
+    align-items: center; /* 아이템들을 수직으로 중앙 정렬 */
+    background-color: #333; /* 배경색을 어두운 회색으로 설정 */
+    color: #fff; /* 텍스트 색상을 흰색으로 설정 */
+    padding: 10px 20px; /* 내부 여백을 상하 10픽셀, 좌우 20픽셀로 설정 */
+    position: fixed; /* 페이지 스크롤에 관계없이 고정된 위치 */
+    width: 100%; /* 너비를 페이지 전체 너비로 설정 */
+    top: 0; /* 페이지 상단에 고정 */
+    z-index: 1000; /* 다른 요소들보다 위에 표시 */
+}
+
+/* 로고 스타일 */
+.logo {
+    height: 35px; /* 로고의 높이를 40픽셀로 설정 */
+    margin-right: 10px; /* 로고와 블로그 이름 사이에 여백 추가 */
+}
+
+/* 네비게이션 링크 스타일 */
+.nav-links {
+    list-style: none; /* 기본 목록 스타일 제거 */
+}
+
+.nav-links li {
+    display: inline; /* 목록 아이템을 가로로 나열 */
+    margin-left: 20px; /* 각 아이템 간의 간격을 20픽셀로 설정 */
+}
+
+.nav-links a {
+    color: #fff; /* 링크 텍스트 색상을 흰색으로 설정 */
+    text-decoration: none; /* 링크의 기본 밑줄 제거 */
+}
+
+/* 모바일 기본 숨기기 */
+/* 모바일에서 메뉴 버튼을 숨깁니다. */
+.menu-button {
+    display: none; /* 기본적으로 숨김 */
+    font-size: 24px; /* 글꼴 크기를 24픽셀로 설정 */
+    cursor: pointer; /* 클릭할 수 있음을 나타내는 커서 */
+}
+
+/* Content Container */
+/* 주요 콘텐츠 영역의 스타일을 설정합니다. */
+.content-container {
+    display: flex; /* 콘텐츠를 플렉스 박스로 배치 */
+    justify-content: center; /* 콘텐츠를 중앙 정렬 */
+    padding-top: 70px; /* 고정된 네비게이션 바와 겹치지 않도록 여백 설정 */
+    flex-grow: 1; /* 콘텐츠가 페이지 높이를 꽉 채우도록 설정 */
+}
+
+/* Left Sidebar */
+/* 왼쪽 사이드바의 스타일을 설정합니다. */
+.left-sidebar {
+    width: 15%; /* 사이드바 너비를 페이지 너비의 15%로 설정 */
+    background-color: #e4e4e4; /* 배경색을 연한 회색으로 설정 (미래 확장을 위한 색상) */
+    padding: 10px; /* 내부 여백을 10픽셀로 설정 */
+}
+
+/* Blog Posts Section */
+/* 블로그 포스트 영역의 스타일을 설정합니다. */
+.blog-posts {
+    width: 55%; /* 블로그 포스트 영역 너비를 페이지 너비의 55%로 설정 */
+    background-color: #fff; /* 배경색을 흰색으로 설정 */
+    padding: 20px; /* 내부 여백을 20픽셀로 설정 */
+    margin: 0 15px; /* 좌우 여백을 15픽셀로 설정 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 미세한 그림자 추가 */
+}
+
+.post-title {
+    font-size: 24px; /* 제목 글꼴 크기를 24픽셀로 설정 */
+    margin-bottom: 10px; /* 제목 아래에 10픽셀의 여백 추가 */
+}
+
+.post-content {
+    font-size: 16px; /* 본문 글꼴 크기를 16픽셀로 설정 */
+    color: #333; /* 본문 텍스트 색상을 어두운 회색으로 설정 */
+}
+
+/* Right Sidebar */
+/* 오른쪽 사이드바의 스타일을 설정합니다. */
+.right-sidebar {
+    width: 20%; /* 사이드바 너비를 페이지 너비의 20%로 설정 */
+    position: relative; /* 상대 위치로 설정 */
+    background-image: url('../images/background.jpg'); /* 배경 이미지 경로 설정 */
+    background-size: cover; /* 배경 이미지를 사이드바 크기에 맞게 조정 */
+    background-position: center; /* 배경 이미지를 중앙에 위치 */
+    color: #ff0000; /* 텍스트 색상을 빨간색으로 설정 */
+    padding: 20px; /* 내부 여백을 20픽셀로 설정 */
+    box-sizing: border-box; /* 패딩을 포함한 너비 계산 */
+    height: auto; /* 높이를 자동으로 설정 (내용에 따라 조정) */
+}
+
+/* 사이드바 내 텍스트 스타일 */
+.right-sidebar h1, .right-sidebar p {
+    margin: 0; /* 기본 여백을 제거하여 텍스트가 깔끔하게 정렬됨 */
+    padding: 0; /* 기본 패딩을 제거 */
+}
+
+/* 프로필 배경 이미지 스타일 */
+.profile {
+    position: relative; /* 상대 위치로 설정 */
+    padding: 20px; /* 내부 여백을 20픽셀로 설정 */
+}
+
+.profile-background {
+    background-image: url('../images/background.jpg'); /* 배경 이미지 경로 설정 */
+    background-size: cover; /* 배경 이미지를 요소 크기에 맞게 조정 */
+    background-position: center; /* 배경 이미지를 중앙에 위치 */
+    height: 300px; /* 높이를 300픽셀로 설정 */
+    opacity: 0.5; /* 투명도를 0.5로 설정하여 어두운 효과 추가 */
+    position: relative; /* 상대 위치로 설정 */
+}
+
+.profile-background::before {
+    content: ''; /* 가상 요소 생성 */
+    position: absolute; /* 절대 위치로 설정 */
+    top: 0; /* 상단에 위치 */
+    left: 0; /* 왼쪽에 위치 */
+    width: 100%; /* 너비를 100%로 설정 */
+    height: 100%; /* 높이를 100%로 설정 */
+    background-color: rgb(255, 255, 255); /* 흰색 배경 추가 */
+    opacity: 0.5; /* 투명도 0.5로 설정하여 어두운 투명 레이어 추가 */
+}
+
+/* Footer */
+/* 페이지 하단의 푸터 스타일을 설정합니다. */
+footer {
+    text-align: center; /* 텍스트를 중앙 정렬 */
+    padding: 20px; /* 내부 여백을 20픽셀로 설정 */
+    background-color: #333; /* 배경색을 어두운 회색으로 설정 */
+    color: #fff; /* 텍스트 색상을 흰색으로 설정 */
+    margin-top: 20px; /* 상단 여백을 20픽셀로 설정 */
+    position: relative; /* 상대 위치로 설정 */
+    bottom: 0; /* 페이지 하단에 고정 */
+    width: 100%; /* 너비를 페이지 전체 너비로 설정 */
+    flex-shrink: 0; /* 푸터가 페이지 하단에 고정되도록 설정 */
+}
+
+/* Banner Section */
+/* 배너 섹션의 기본 스타일을 설정합니다. */
+.banner {
+    position: relative; /* 자식 요소의 절대 위치를 기준으로 설정 */
+    width: 100%; /* 배너의 너비를 페이지 전체 너비로 설정 */
+    height: 0; /* 높이를 0으로 설정 (padding-bottom으로 높이 조정) */
+    padding-bottom: 33.33%; /* 높이를 너비의 33.33%로 설정 (3:1 비율 유지) */
+    margin-top: 20px; /* 배너 상단에 20픽셀 여백 추가 */
+    overflow: hidden; /* 넘치는 콘텐츠는 숨김 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 미세한 그림자 추가 */
+}
+
+/* 배너 이미지를 담는 컨테이너 */
+.banner-images {
+    position: absolute; /* 배너 내에서 절대 위치 설정 */
+    top: 0; /* 상단에 위치 */
+    left: 0; /* 왼쪽에 위치 */
+    width: 100%; /* 너비를 100%로 설정 */
+    height: 100%; /* 높이를 100%로 설정 */
+}
+
+/* 배너 이미지 스타일 */
+.banner-image {
+    position: absolute; /* 배너 내에서 절대 위치 설정 */
+    top: 0; /* 상단에 위치 */
+    left: 0; /* 왼쪽에 위치 */
+    width: 100%; /* 너비를 100%로 설정 */
+    height: 100%; /* 높이를 100%로 설정 */
+    background-size: cover; /* 배경 이미지를 요소 크기에 맞게 조정 */
+    background-position: center; /* 배경 이미지를 중앙에 위치 */
+    opacity: 0; /* 초기 투명도를 0으로 설정 (숨김 상태) */
+    transition: opacity 1s ease-in-out; /* 투명도 변경에 부드러운 전환 효과 추가 */
+}
+
+/* 활성화된 배너 이미지 */
+.banner-image.active {
+    opacity: 1; /* 활성화된 이미지는 투명도를 1로 설정하여 보이게 함 */
+}
+
+/* 배너 이미지의 어두운 투명 레이어 */
+.banner-image::before {
+    content: ''; /* 빈 콘텐츠를 생성하여 스타일링을 추가 */
+    position: absolute; /* 배너 이미지 내에서 절대 위치 설정 */
+    top: 0; /* 상단에 위치 */
+    left: 0; /* 왼쪽에 위치 */
+    width: 100%; /* 너비를 100%로 설정 */
+    height: 100%; /* 높이를 100%로 설정 */
+    background-color: black; /* 배경색을 검정색으로 설정 */
+    opacity: 0.3; /* 투명도 0.3으로 설정하여 어두운 효과 추가 */
+}
+
+/* 배너의 페이지 네비게이션 점 스타일 */
+.banner-dots {
+    position: absolute; /* 배너 내에서 절대 위치 설정 */
+    bottom: 10px; /* 하단에서 10픽셀 떨어진 위치 */
+    right: 10px; /* 오른쪽에서 10픽셀 떨어진 위치 */
+    display: flex; /* 점들을 플렉스 박스로 배치 */
+    gap: 5px; /* 점들 간의 간격을 5픽셀로 설정 */
+}
+
+/* 네비게이션 점 스타일 */
+.dot {
+    width: 10px; /* 점의 너비를 10픽셀로 설정 */
+    height: 10px; /* 점의 높이를 10픽셀로 설정 */
+    background-color: white; /* 점의 기본 배경색을 흰색으로 설정 */
+    border-radius: 50%; /* 점을 원형으로 만듦 */
+    cursor: pointer; /* 클릭 가능한 커서로 설정 */
+    transition: background-color 0.3s; /* 배경색 변경에 부드러운 전환 효과 추가 */
+}
+
+/* 활성화된 네비게이션 점 */
+.dot.active {
+    background-color: red; /* 활성화된 점의 배경색을 빨간색으로 설정 */
+}
+
+/* Navbar (네비게이션 바) */
+/* 네비게이션 바 스타일을 설정합니다. */
+.navbar {
+    display: flex; /* 플렉스 박스로 배치 */
+    justify-content: space-between; /* 아이템 사이에 균등한 간격 설정 */
+    align-items: center; /* 아이템을 수직으로 중앙에 정렬 */
+    background-color: #333; /* 배경색을 어두운 회색으로 설정 */
+    color: #fff; /* 텍스트 색상을 흰색으로 설정 */
+    padding: 10px 20px; /* 내부 여백을 상하 10픽셀, 좌우 20픽셀로 설정 */
+    position: fixed; /* 페이지 스크롤에 관계없이 고정된 위치 */
+    width: 100%; /* 너비를 페이지 전체 너비로 설정 */
+    top: 0; /* 페이지 상단에 고정 */
+    z-index: 1000; /* 다른 요소들보다 위에 표시 */
+}
+
+/* 로고 스타일 */
+.logo {
+    height: 40px; /* 로고의 높이를 40픽셀로 설정 */
+}
+
+/* 네비게이션 링크 스타일 */
+.nav-links {
+    list-style: none; /* 기본 목록 스타일 제거 */
+}
+
+.nav-links li {
+    display: inline; /* 목록 아이템을 가로로 나열 */
+    margin-left: 20px; /* 각 아이템 간의 간격을 20픽셀로 설정 */
+}
+
+.nav-links a {
+    color: #fff; /* 링크 텍스트 색상을 흰색으로 설정 */
+    text-decoration: none; /* 링크의 기본 밑줄 제거 */
+}
+
+/* 모바일 기본 숨기기 */
+/* 모바일에서 메뉴 버튼을 숨깁니다. */
+.menu-button {
+    display: none; /* 기본적으로 숨김 */
+    font-size: 24px; /* 글꼴 크기를 24픽셀로 설정 */
+    cursor: pointer; /* 클릭할 수 있음을 나타내는 커서 */
+}
+
+/* 사이드바 기본 표시 */
+.right-sidebar,
+.left-sidebar {
+    display: block; /* 기본적으로 사이드바는 표시됨 */
+}
+
+/* Light/Dark Mode Toggle Button */
+/* 라이트/다크 모드 토글 버튼의 스타일을 설정합니다. */
+.mode-toggle {
+    cursor: pointer; /* 클릭 가능한 커서로 설정 */
+    font-size: 24px; /* 글꼴 크기를 24픽셀로 설정 */
+    margin-left: 20px; /* 왼쪽 여백을 20픽셀로 설정 */
+}
+
+/* 반응형 스타일링 */
+/* 화면 너비가 768픽셀 이하일 때의 모바일 스타일 설정 */
+@media (max-width: 768px) {
+    /* 모바일 스타일 */
+
+    /* Navbar */
+    .nav-links {
+        display: none; /* 모바일에서는 기본 메뉴 숨김 */
+        flex-direction: column; /* 세로 방향으로 배치 */
+        background-color: #333; /* 배경색을 어두운 회색으로 설정 */
+        position: absolute; /* 절대 위치로 설정 */
+        top: 50px; /* 상단에서 50픽셀 떨어진 위치 */
+        left: 0; /* 왼쪽에 위치 */
+        width: 100%; /* 너비를 페이지 전체 너비로 설정 */
+    }
+
+    .nav-links li {
+        display: block; /* 목록 아이템을 블록으로 표시 */
+        margin: 10px 0; /* 아이템 간의 여백을 10픽셀로 설정 */
+    }
+
+    .menu-button {
+        display: block; /* 햄버거 메뉴 버튼 표시 */
+    }
+
+    .navbar {
+        justify-content: space-between; /* 메뉴 버튼과 링크 사이에 균등한 간격 설정 */
+    }
+
+    /* 사이드바 */
+    .right-sidebar,
+    .left-sidebar {
+        display: none; /* 모바일에서 사이드바 숨김 */
+    }
+
+    /* 배너 */
+    .banner {
+        margin: 0 auto; /* 배너를 중앙 정렬 */
+        width: 100%; /* 너비를 페이지 전체 너비로 설정 */
+        padding-bottom: 33.33%; /* 배너 높이 유지 (비율 유지) */
+    }
+
+    /* 블로그 포스트 */
+    .blog-posts {
+        width: 100%; /* 모바일에서는 포스트가 화면을 꽉 채우도록 설정 */
+        margin: 0; /* 좌우 여백 제거 */
+        padding: 20px; /* 내부 여백을 20픽셀로 설정 */
+    }
+
+    /* 모드 토글 버튼 */
+    .mode-toggle {
+        order: -1; /* 햄버거 메뉴를 좌측으로 이동 */
+        margin-left: 0; /* 왼쪽 여백 제거 */
+        margin-right: 20px; /* 오른쪽 여백을 20픽셀로 설정 */
+    }
+}
+
+/* 데스크탑 스타일 */
+/* 화면 너비가 769픽셀 이상일 때의 데스크탑 스타일 설정 */
+@media (min-width: 769px) {
+    /* 데스크탑 스타일 */
+
+    /* 네비게이션 바 */
+    .navbar {
+        justify-content: flex-end; /* 네비게이션 링크를 오른쪽으로 정렬 */
+    }
+        
+    /* 모드 토글 버튼 */
+    .mode-toggle {
+        margin-right: 20px; /* 데스크탑에서 오른쪽 여백*/
+    }
+}

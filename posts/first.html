@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title> 
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="../images/logo.png" alt="Logo" class="logo">
+            <h1>Welcome to Kevin's Control World!</h1>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#posts">Posts</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#references">References</a></li>
+            </ul>
+            <div class="menu-button" id="menuButton">☰</div> <!-- 햄버거 메뉴 버튼 -->
+            <div class="mode-toggle" id="modeToggle">🌙</div> <!-- 라이트/다크 모드 버튼 -->
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <aside class="left-sidebar">
+                 <p>Here is for left side bar contents</p>
+            </aside>
+
+            <section class="blog-posts">
+                <article class="post">
+                    <h1 class="post-title">Sample Blog Post Title</h1>
+                    <p class="post-content">
+                    Hello, my name is Kevin. I'm a system engineer who wants to understand all round the world by mass, damper, spring, and force.
+                    </p>
+                    <p>I love the Disturbance Observer for controlling systems.</p>
+                    <p>동해물과 백두산이</p>
+ 
+                </article>
+
+                <section class="banner">
+                    <div class="banner-images">
+                        <div class="banner-image active" style="background-image: url('../images/banner1.png');"></div>
+                        <div class="banner-image" style="background-image: url('../images/banner2.png');"></div>
+                        <div class="banner-image" style="background-image: url('../images/banner3.png');"></div>
+                        <div class="banner-image" style="background-image: url('../images/banner4.png');"></div>
+                    </div>
+                    <div class="banner-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </section>
+
+            </section>
+
+            <aside class="right-sidebar">
+                <div class="profile">
+                    <p>Here is for right side bar contents</p>
+                    <div class="profile-background">
+                        <p>Where are you?</p>
+                        <p>I am in the block box</p>
+                        <p>I want to delet the black box. How can I do that?</p>
+                    </div>
+                    <p>Where are you?</p>                    
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+        <p>Designed by Kevin</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
