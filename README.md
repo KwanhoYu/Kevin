@@ -17,7 +17,7 @@
 - **[M.S. Eng.]** 2023. </br>
  -Yeungnam University, the Republic of Korea :kr: </br>
  -Department of Robotics Engineering </br>
- -Thesis Title: Admittance Control with Disturbance Observer for Development Winding Machine to Manufacture Type IV Hydrogen Container </br>
+ -Thesis Title: Admittance Control with Disturbance Observer for Development Winding Machine to Manufacture Type IV Hydrogen Container [LINK](https://www.riss.kr/link?id=T16826177) </br>
  -Rersearch Adciser: Prof. Jungsu Choi </br>
 
 - **[GSPP]** 2020. </br>
@@ -28,8 +28,8 @@
 
 - **[ESL]** 2019. </br>
  -Sheridan College, Ontario, Canada :canada: </br>
- -English as a Second Language </br>
- -English for Academic Purposes </br>
+ -English as a Second Language (ESL)</br>
+ -English for Academic Purposes (EAP)</br>
 
 - **[B. Eng]** 2017. </br>
  -Halla University, the Republic of Korea :kr: </br>
